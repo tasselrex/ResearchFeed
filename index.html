@@ -176,6 +176,22 @@
 
     loadFeed();
     setInterval(loadFeed, 30 * 60 * 1000);
+
+    const container = document.getElementById("items");
+
+let direction = 1;
+
+setInterval(() => {
+    container.scrollTop += direction;
+
+    if (container.scrollTop + container.clientHeight >= container.scrollHeight) {
+        direction = -1;
+    }
+
+    if (container.scrollTop <= 0) {
+        direction = 1;
+    }
+}, 40);
   </script>
 </body>
 </html>
