@@ -137,7 +137,7 @@
     function render(items) {
       const root = document.getElementById("items");
       root.innerHTML = "";
-      const list = (Array.isArray(items) && items.length ? items : SAMPLE).slice(0, 4);
+      const list = (Array.isArray(items) && items.length ? items : SAMPLE).slice(0, 50);
       for (const item of list) {
         const div = document.createElement("div");
         div.className = "item";
