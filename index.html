@@ -1,1 +1,235 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI Research Feed</title>
+  <style>
+    :root {
+      --bg: #0b0f14;
+      --panel: #111823;
+      --panel-2: #0f1620;
+      --text: #e8eef7;
+      --muted: #8ea0b7;
+      --accent: #57a6ff;
+      --accent-2: #8bf0c8;
+      --line: #223043;
+      --danger: #ff9a9a;
+    }
+    html, body {
+      margin: 0;
+      width: 100%;
+      height: 100%;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Inter, Segoe UI, Arial, sans-serif;
+      overflow: hidden;
+    }
+    * { box-sizing: border-box; }
+    .wrap {
+      width: 100%;
+      height: 100%;
+      padding: 12px;
+    }
+    .card {
+      width: 100%;
+      height: 100%;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: linear-gradient(180deg, #121a26 0%, var(--panel-2) 100%);
+      padding: 10px;
+      overflow: hidden;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 8px;
+      padding-bottom: 8px;
+      margin-bottom: 8px;
+      border-bottom: 1px solid var(--line);
+    }
+    .title {
+      font-size: 16px;
+      font-weight: 800;
+      letter-spacing: 0.2px;
+    }
+    .sub {
+      font-size: 11px;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+    .status {
+      font-size: 11px;
+      color: var(--accent-2);
+      margin-left: auto;
+      white-space: nowrap;
+    }
+    .items {
+      display: grid;
+      gap: 8px;
+      height: calc(100% - 42px);
+      overflow: hidden;
+    }
+    .item {
+      border: 1px solid rgba(34,48,67,0.85);
+      background: rgba(255,255,255,0.02);
+      border-radius: 14px;
+      padding: 9px 10px;
+      min-height: 0;
+    }
+    .headline {
+      font-size: 13px;
+      line-height: 1.25;
+      font-weight: 700;
+      margin-bottom: 4px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .headline a {
+      color: var(--text);
+      text-decoration: none;
+    }
+    .meta {
+      font-size: 10px;
+      color: var(--muted);
+      margin-bottom: 4px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      align-items: center;
+    }
+    .tag {
+      color: var(--accent);
+      font-weight: 700;
+    }
+    .summary {
+      font-size: 11px;
+      line-height: 1.32;
+      color: var(--text);
+      opacity: 0.95;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .footer {
+      position: absolute;
+      right: 16px;
+      bottom: 10px;
+      font-size: 10px;
+      color: var(--muted);
+    }
+    .error {
+      color: var(--danger);
+      font-size: 11px;
+      margin-top: 8px;
+    }
+    .shell {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <div class="shell">
+        <div class="header">
+          <div>
+            <div class="title">AI Research Feed</div>
+            <div class="sub">arXiv · bioRxiv · PubMed · nature</div>
+          </div>
+          <div class="status" id="status">loading…</div>
+        </div>
 
+        <div class="items" id="items"></div>
+        <div class="error" id="error" style="display:none;"></div>
+        <div class="footer" id="updated"></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const fallbackItems = [
+      {
+        title: "Placeholder: new AI paper on reasoning and multimodal models",
+        source: "arXiv cs.AI",
+        date: new Date().toISOString().slice(0, 10),
+        summary: "Replace this with live items from your feed.json file.",
+        link: "#"
+      },
+      {
+        title: "Placeholder: efficient fine-tuning method for small datasets",
+        source: "arXiv cs.LG",
+        date: new Date().toISOString().slice(0, 10),
+        summary: "This page works even before your feed generator is online.",
+        link: "#"
+      },
+      {
+        title: "Placeholder: biomedical AI and protein design update",
+        source: "bioRxiv",
+        date: new Date().toISOString().slice(0, 10),
+        summary: "Add your own topics or use an automated feed builder later.",
+        link: "#"
+      }
+    ];
+
+    function render(items) {
+      const root = document.getElementById('items');
+      root.innerHTML = '';
+      const safe = (Array.isArray(items) && items.length ? items : fallbackItems).slice(0, 4);
+
+      safe.forEach(item => {
+        const div = document.createElement('div');
+        div.className = 'item';
+        const title = item.title || 'Untitled';
+        const source = item.source || 'Source';
+        const date = item.date || '';
+        const summary = item.summary || '';
+        const link = item.link || '#';
+        div.innerHTML = `
+          <div class="headline"><a href="${link}" target="_blank" rel="noreferrer">${escapeHtml(title)}</a></div>
+          <div class="meta"><span class="tag">${escapeHtml(source)}</span><span>·</span><span>${escapeHtml(date)}</span></div>
+          <div class="summary">${escapeHtml(summary)}</div>
+        `;
+        root.appendChild(div);
+      });
+    }
+
+    function escapeHtml(s) {
+      return String(s)
+        .replaceAll('&', '&amp;')
+        .replaceAll('<', '&lt;')
+        .replaceAll('>', '&gt;')
+        .replaceAll('"', '&quot;')
+        .replaceAll("'", '&#39;');
+    }
+
+    async function loadFeed() {
+      try {
+        // Put feed.json in the same repo folder as index.html.
+        const response = await fetch('./feed.json', { cache: 'no-store' });
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        const data = await response.json();
+        render(data.items || data);
+        document.getElementById('status').textContent = 'live';
+        document.getElementById('updated').textContent = `Updated ${new Date().toLocaleTimeString([], {hour:'2-digit', minute:'2-digit'})}`;
+      } catch (err) {
+        render(fallbackItems);
+        document.getElementById('status').textContent = 'sample mode';
+        const error = document.getElementById('error');
+        error.style.display = 'block';
+        error.textContent = 'Could not load feed.json yet. The widget is showing sample items.';
+        document.getElementById('updated').textContent = 'Refreshes every 30 minutes';
+      }
+    }
+
+    loadFeed();
+    setInterval(loadFeed, 30 * 60 * 1000);
+  </script>
+</body>
+</html>
