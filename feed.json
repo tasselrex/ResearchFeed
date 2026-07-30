@@ -1,20 +1,10 @@
 {
-  "updatedAt": "2026-07-30T00:00:00Z",
-  "items": [
-    {
-      "title": "Sample: global workspace and access consciousness",
-      "summary": "This is placeholder data. The scheduled workflow will replace it with live arXiv items.",
-      "source": "sample",
-      "date": "2026-07-30",
-      "link": "https://arxiv.org/"
-    },
-    {
-      "title": "Sample: anesthesia and neural correlates of consciousness",
-      "summary": "This page will still render while GitHub Actions is waiting to run.",
-      "source": "sample",
-      "date": "2026-07-30",
-      "link": "https://arxiv.org/"
-    }
-  ],
-  "errors": []
+  "updatedAt": "2026-07-30T04:02:33.050929+00:00",
+  "items": [],
+  "errors": [
+    "arXiv \u00b7 consciousness: HTTP Error 400: Bad Request",
+    "arXiv \u00b7 anesthesia: HTTP Error 400: Bad Request",
+    "arXiv \u00b7 philosophy of mind: HTTP Error 400: Bad Request",
+    "arXiv \u00b7 meditation: HTTP Error 400: Bad Request"
+  ]
 }
