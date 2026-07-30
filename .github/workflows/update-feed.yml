@@ -1,4 +1,4 @@
-name: Update consciousness feed
+name: update consciousness feed
 
 on:
   schedule:
