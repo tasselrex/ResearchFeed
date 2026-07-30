@@ -103,7 +103,7 @@ async function fetchWithTimeout(url, timeoutMs = 20000) {
     const res = await fetch(url, {
       signal: controller.signal,
       headers: {
-        "User-Agent": "Mozilla/5.0 (compatible; ConsciousnessFeed/1.0; +https://github.com/tasselrex/AIResearchFeed)"
+        "User-Agent": "Mozilla/5.0 (compatible; ConsciousnessFeed/1.0; +https://github.com/tasselrex/consciousness)"
       }
     });
     if (!res.ok) throw new Error(`HTTP ${res.status} ${res.statusText}`);
