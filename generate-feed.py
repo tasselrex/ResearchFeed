@@ -13,10 +13,12 @@ OUT = Path("feed.json")
 MAX_ITEMS = 24
 
 QUERIES = [
-    ("arXiv · consciousness", 'all:consciousness OR all:"global workspace" OR all:"neural correlates of consciousness"'),
-    ("arXiv · anesthesia", 'all:anesthesia OR all:anaesthesia OR all:"loss of consciousness"'),
-    ("arXiv · philosophy of mind", 'all:"philosophy of mind" OR all:"integrated information" OR all:"machine consciousness"'),
-    ("arXiv · meditation", 'all:meditation OR all:awareness OR all:attention OR all:"altered states"'),
+    ("arXiv · consciousness", "all:consciousness"),
+    ("arXiv · awareness", "all:awareness"),
+    ("arXiv · meditation", "all:meditation"),
+    ("arXiv · anesthesia", "all:anesthesia"),
+    ("arXiv · integrated information", 'all:"integrated information"'),
+    ("arXiv · global workspace", 'all:"global workspace"'),
 ]
 
 HEADERS = {
