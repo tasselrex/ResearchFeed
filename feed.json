@@ -1,0 +1,25 @@
+{
+  "items": [
+    {
+      "title": "Sample AI paper on reasoning",
+      "source": "arXiv cs.AI",
+      "date": "2026-07-30",
+      "summary": "A placeholder item for your widget.",
+      "link": "https://arxiv.org/"
+    },
+    {
+      "title": "Sample machine learning paper",
+      "source": "arXiv cs.LG",
+      "date": "2026-07-30",
+      "summary": "Replace this with live paper data.",
+      "link": "https://arxiv.org/"
+    },
+    {
+      "title": "Sample bioinformatics update",
+      "source": "bioRxiv",
+      "date": "2026-07-30",
+      "summary": "This proves the layout and fetch logic work.",
+      "link": "https://www.biorxiv.org/"
+    }
+  ]
+}
