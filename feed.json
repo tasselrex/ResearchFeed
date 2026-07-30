@@ -1,19 +1,20 @@
 {
-  "updatedAt": "2026-07-30T00:00:00.000Z",
+  "updatedAt": "2026-07-30T00:00:00Z",
   "items": [
     {
       "title": "Sample: global workspace and access consciousness",
-      "summary": "This is a starter item. The GitHub Action will replace it with live arXiv results.",
-      "source": "arXiv \u00b7 consciousness",
+      "summary": "This is placeholder data. The scheduled workflow will replace it with live arXiv items.",
+      "source": "sample",
       "date": "2026-07-30",
       "link": "https://arxiv.org/"
     },
     {
-      "title": "Sample: anesthesia and the neural correlates of consciousness",
-      "summary": "A placeholder record to keep the widget looking populated before the first run.",
-      "source": "arXiv \u00b7 anesthesia",
+      "title": "Sample: anesthesia and neural correlates of consciousness",
+      "summary": "This page will still render while GitHub Actions is waiting to run.",
+      "source": "sample",
       "date": "2026-07-30",
       "link": "https://arxiv.org/"
     }
-  ]
+  ],
+  "errors": []
 }

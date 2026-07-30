@@ -1,17 +1,21 @@
-# Consciousness feed package
+# Consciousness feed fix
 
-## Files
-- `generate-feed.mjs` — fetches arXiv Atom feeds and writes `feed.json`
-- `.github/workflows/update-feed.yml` — runs every hour on GitHub Actions
-- `feed.json` — starter data so the widget displays immediately
+## Upload these files
+- `index.html` to the repo root
+- `generate-feed.py` to the repo root
+- `feed.json` to the repo root
+- `.github/workflows/update-feed.yml`
 
-## Upload steps
-1. Put `generate-feed.mjs` in the repository root.
-2. Put `feed.json` in the repository root.
-3. Put `update-feed.yml` in `.github/workflows/`.
-4. Commit and push.
-5. Enable GitHub Actions if prompted.
+## What happens
+`index.html` reads `feed.json`.
 
-## Notes
-- The workflow uses UTC cron scheduling.
-- The page will keep showing the last generated `feed.json` until the workflow runs again.
+`generate-feed.py` runs on GitHub Actions every hour, fetches arXiv Atom feeds, and rewrites `feed.json`.
+
+## Why this is more reliable
+The browser no longer depends on an external feed proxy. GitHub Actions does the fetching server-side, then GitHub Pages serves the finished static file.
+
+## After upload
+1. Commit the files.
+2. Open the **Actions** tab and confirm the workflow runs.
+3. Open `https://tasselrex.github.io/AIResearchFeed/feed.json`.
+4. If it updates, your widget page will show live items on the next refresh.
