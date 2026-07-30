@@ -1,25 +1,19 @@
 {
+  "updatedAt": "2026-07-30T00:00:00.000Z",
   "items": [
     {
-      "title": "Sample AI paper on reasoning",
-      "source": "arXiv cs.AI",
+      "title": "Sample: global workspace and access consciousness",
+      "summary": "This is a starter item. The GitHub Action will replace it with live arXiv results.",
+      "source": "arXiv \u00b7 consciousness",
       "date": "2026-07-30",
-      "summary": "A placeholder item for your widget.",
       "link": "https://arxiv.org/"
     },
     {
-      "title": "Sample machine learning paper",
-      "source": "arXiv cs.LG",
+      "title": "Sample: anesthesia and the neural correlates of consciousness",
+      "summary": "A placeholder record to keep the widget looking populated before the first run.",
+      "source": "arXiv \u00b7 anesthesia",
       "date": "2026-07-30",
-      "summary": "Replace this with live paper data.",
       "link": "https://arxiv.org/"
-    },
-    {
-      "title": "Sample bioinformatics update",
-      "source": "bioRxiv",
-      "date": "2026-07-30",
-      "summary": "This proves the layout and fetch logic work.",
-      "link": "https://www.biorxiv.org/"
     }
   ]
 }
