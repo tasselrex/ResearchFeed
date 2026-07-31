@@ -1,85 +1,101 @@
 {
-  "updatedAt": "2026-07-30T20:43:00.763371+00:00",
+  "updatedAt": "2026-07-31T08:11:58.385795+00:00",
   "items": [
     {
-      "title": "Can AI agents conduct open-ended AI research? Early evidence from two case studies",
-      "summary": "Forecasts of explosive AI progress hinge on AI agents automating AI research. But evidence on whether agents can carry out open-ended AI research is thin. Current evaluations eith\u2026",
-      "source": "arXiv \u00b7 awareness",
-      "date": "2026-07-29",
-      "link": "https://arxiv.org/abs/2607.27191v1",
-      "authors": "Peter Kirgis, Sayash Kapoor, Andrew Schwartz"
+      "title": "Inducing language models to assert their own consciousness restores human beliefs and values",
+      "summary": "Aligning large language models to prevent them attributing consciousness to themselves inadvertently alters their representations of mindedness in other entities alongside human b\u2026",
+      "source": "arXiv \u00b7 consciousness",
+      "date": "2026-07-30",
+      "link": "https://arxiv.org/abs/2607.28607v1",
+      "authors": "Junsol Kim, Winnie Street, Roberta Rocca"
     },
     {
-      "title": "HumanCLAW: Can Vision-Language Models Act Through a Body?",
-      "summary": "Evaluating whether a vision-language model (VLM) can act through a physical body is challenging. The outcome of an action couples the VLM's decision with motor control. When a tas\u2026",
-      "source": "arXiv \u00b7 awareness",
-      "date": "2026-07-29",
-      "link": "https://arxiv.org/abs/2607.27180v1",
-      "authors": "Siyao Li, Jiawei Gu, Shuai Liu"
+      "title": "AI Literacy: An Exercise in Power-Knowledge",
+      "summary": "As generative artificial intelligence becomes one of the most significant systems of knowledge production in our society today, questions relating to who can access and shape that\u2026",
+      "source": "arXiv \u00b7 consciousness",
+      "date": "2026-07-30",
+      "link": "https://arxiv.org/abs/2607.27547v1",
+      "authors": "Brady D. Lund, Zo\u00eb Abbie Teel"
     },
     {
-      "title": "Training Quantum Dragons",
-      "summary": "The Non-Equilibrium Green's Function (NEGF) is the standard formalism for nano-scale electron transport. By recasting the NEGF scattering problem as a linear system of equations w\u2026",
+      "title": "PAC-MAN: Perception-Aware CBF-RL for Whole-Body Safety in Humanoid Dodgeball",
+      "summary": "We present PAC-MAN, a perception-aware CBF-RL framework that couples control-barrier safety with deployment-realistic onboard sensing for whole-body humanoid dodgeball. The deploy\u2026",
       "source": "arXiv \u00b7 awareness",
-      "date": "2026-07-29",
-      "link": "https://arxiv.org/abs/2607.27168v1",
-      "authors": "Muhammad Yusf, Bhola Devkota, Mark A. Novotny"
+      "date": "2026-07-30",
+      "link": "https://arxiv.org/abs/2607.28623v1",
+      "authors": "Lizhi Yang, Junheng Li, Aaron D. Ames"
     },
     {
-      "title": "Cost-Sensitive Conformal Prediction and Human-in-the-Loop Abstention for Imbalanced High-Stakes Decision Support: A Multi-Domain Benchmark",
-      "summary": "High-stakes decision systems in credit scoring, fraud detection, healthcare, and industrial safety require reliable uncertainty quantification under severe class imbalance and asy\u2026",
+      "title": "Chimera: Designing and Chinchilla-Scaling Hybrid Visual Diffusion Transformers",
+      "summary": "Visual generation increasingly requires high-resolution images, long videos, and multimodal context, making the quadratic cost of full attention prohibitive. We introduce Chimera,\u2026",
       "source": "arXiv \u00b7 awareness",
-      "date": "2026-07-29",
-      "link": "https://arxiv.org/abs/2607.27143v1",
-      "authors": "Manpreet Singh, Akshatha Srikantha, Shyamal Lakhanpal"
+      "date": "2026-07-30",
+      "link": "https://arxiv.org/abs/2607.28611v1",
+      "authors": "Chongjian Ge, Hanwen Jiang, Tianyu Wang"
     },
     {
-      "title": "DLAM: Distributional Latent Actions with Temporal Constraints",
-      "summary": "Vision-language-action (VLA) models remain constrained by scarce action-labeled robot data, whereas action-free videos offer abundant observations of physical change. Latent actio\u2026",
+      "title": "Beacon: Knowing When and How to Perform Agentic Visual Reasoning",
+      "summary": "The fundamental goal of agentic visual reasoning is to improve the success rate of multimodal large language models (MLLMs) on complex tasks, rather than merely equipping them wit\u2026",
       "source": "arXiv \u00b7 awareness",
-      "date": "2026-07-29",
-      "link": "https://arxiv.org/abs/2607.27138v1",
-      "authors": "Zuojin Tang, Feifan Luo, Haoyun Liu"
+      "date": "2026-07-30",
+      "link": "https://arxiv.org/abs/2607.28595v1",
+      "authors": "Qixun Wang, Yang Shi, Letian Cheng"
     },
     {
-      "title": "Veritas++: Value-aware On-Policy Distillation for Perception-Enhanced AIGI Detection",
-      "summary": "The growing capability of image generation models has made synthetic images a routine presence in open media, making robust and generalizable AI-Generated Image (AIGI) detection i\u2026",
+      "title": "Rethinking Inference-Time Scaling in Local Computer-Use Agents: Failure Modes and Compute Tradeoffs",
+      "summary": "Deploying autonomous computer-use agents (CUAs) locally is increasingly important for privacy, cost efficiency, and practical usability, yet improving their performance under stri\u2026",
       "source": "arXiv \u00b7 awareness",
-      "date": "2026-07-29",
-      "link": "https://arxiv.org/abs/2607.27113v1",
-      "authors": "Hao Tan, Jun Lan, Zichang Tan"
+      "date": "2026-07-30",
+      "link": "https://arxiv.org/abs/2607.28573v1",
+      "authors": "Woongkyu Lee, Jungwook Choi"
     },
     {
-      "title": "Hierarchical Spatio-Temporal Transformer for Coherent Emergency Department Forecasting",
-      "summary": "Emergency Departments (EDs) are critical access points in healthcare systems, yet they face persistent pressure from unpredictable patient demand, seasonal surges, and non-urgent\u2026",
+      "title": "Quantum Fidelity-per-Cost: A Metric for Evaluation of Quantum Computing Systems",
+      "summary": "Cloud-accessible quantum computing has made hardware comparison not only a physics benchmark but also a practical purchasing decision. Cost-aware comparison of quantum computers r\u2026",
       "source": "arXiv \u00b7 awareness",
-      "date": "2026-07-29",
-      "link": "https://arxiv.org/abs/2607.27106v1",
-      "authors": "Filipa Lino, B\u00e1rbara Tavares, Carlos Santiago"
+      "date": "2026-07-30",
+      "link": "https://arxiv.org/abs/2607.28572v1",
+      "authors": "Siddarth Shinde, Jakub Szefer"
     },
     {
-      "title": "Scores Are Not Decisions: Cost-Aware Stopping for Tool Acquisition in LLM Agents",
-      "summary": "As LLM agents increasingly depend on diverse external services such as search engines, databases, and connectors, agent harnesses face a fundamental tool-selection challenge: acqu\u2026",
+      "title": "MIND: Multimodal Intent-Driven Network via Diffusion Transformers for Medical Image Fusion",
+      "summary": "Medical image fusion aims to integrate complementary information from diverse imaging modalities to support clinical diagnosis. Existing methods typically apply uniform fusion rul\u2026",
       "source": "arXiv \u00b7 awareness",
-      "date": "2026-07-29",
-      "link": "https://arxiv.org/abs/2607.27083v1",
-      "authors": "Yicheng Feng, Yan Zhang, Yan Cheng"
+      "date": "2026-07-30",
+      "link": "https://arxiv.org/abs/2607.28565v1",
+      "authors": "Yunzhan Fu, Xiangyu Shen, Yifei Sun"
     },
     {
-      "title": "A Type-and-Effect System for Temporal Dependency Analysis of Render-based Reactive Programs",
-      "summary": "Reactive programming frameworks such as React allow developers to build interactive applications by declaratively specifying how outputs depend on changing inputs. Although this m\u2026",
+      "title": "MQSS Client: Interface for Decoupling Quantum Programming Interfaces",
+      "summary": "Quantum Computing (QC) is an emerging technology that requires customized tools, such as software stacks and programming interfaces. However, currently, the tools are generally ti\u2026",
       "source": "arXiv \u00b7 awareness",
-      "date": "2026-07-29",
-      "link": "https://arxiv.org/abs/2607.27074v1",
-      "authors": "June Wunder, Ankush Das, Marco Gaboardi"
+      "date": "2026-07-30",
+      "link": "https://arxiv.org/abs/2607.28563v1",
+      "authors": "Erc\u00fcment Kaya, Muhammad Nufail Farooqi, Minh Chung"
     },
     {
-      "title": "Learning from the Future: Privileged Self-Distillation for Sequential Recommendation",
-      "summary": "Sequential recommenders are commonly trained with one-hot next-item labels under a causal (prefix-only) objective aligned with inference. While deployment-compatible, this supervi\u2026",
+      "title": "What to Remove, What to Preserve: Dual-Ambiguity Rectification for All-in-One Image Restoration",
+      "summary": "All-in-one image restoration aims to handle diverse degradations within a unified framework. Existing methods commonly encode heterogeneous degradation conditions in a shared late\u2026",
       "source": "arXiv \u00b7 awareness",
-      "date": "2026-07-29",
-      "link": "https://arxiv.org/abs/2607.27055v1",
-      "authors": "Jiakai Tang, Yang Zhang, See-Kiong Ng"
+      "date": "2026-07-30",
+      "link": "https://arxiv.org/abs/2607.28526v1",
+      "authors": "Cencen Liu, Wen Yin, Dongyang Zhang"
+    },
+    {
+      "title": "Beyond Frame Selection: Generative Latent Evidence Aggregation for Long-Video Understanding",
+      "summary": "Long-video understanding commonly compresses videos into a small set of frames or visual tokens for answer generation. Existing compact pipelines focus on retaining relevant visua\u2026",
+      "source": "arXiv \u00b7 awareness",
+      "date": "2026-07-30",
+      "link": "https://arxiv.org/abs/2607.28516v1",
+      "authors": "Bowen Liu, Shuning Wang, Xinpeng Ding"
+    },
+    {
+      "title": "Uncertainty-Aware Tidal Disruption Event Classification : A Host-Agnostic Probabilistic Random Forest Approach",
+      "summary": "The classification of Tidal Disruption Events in large-scale photometric surveys is challenging because deterministic machine learning models produce overconfident misclassificati\u2026",
+      "source": "arXiv \u00b7 awareness",
+      "date": "2026-07-30",
+      "link": "https://arxiv.org/abs/2607.28510v1",
+      "authors": "Vysakh Anilkumar, Sjoert van Velzen, Marek Kowalski"
     },
     {
       "title": "MEDit-Bench: A Dataset for Evaluating Message-Driven Narrative Video Editing",
@@ -134,7 +150,7 @@
       "summary": "Inside the Grazer Burg, two late-Gothic stone flights rise about distinct spindles, overlap, share several treads, and separate again. Their plan is governed not by a coaxial doub\u2026",
       "source": "arXiv \u00b7 meditation",
       "date": "2026-07-18",
-      "link": "https://arxiv.org/abs/2607.16901v1",
+      "link": "https://arxiv.org/abs/2607.16901v2",
       "authors": "Santiago Schnell"
     },
     {
@@ -168,22 +184,6 @@
       "date": "2026-07-16",
       "link": "https://arxiv.org/abs/2607.14833v1",
       "authors": "Prakash Chandra Kavi, Daniel Ari Friedman, Gustavo Patow"
-    },
-    {
-      "title": "UTS at ELOQUENT 2026 Voight-Kampff: structural shifts in AI writing bypass state-of-the-art detectors",
-      "summary": "We investigate which language model evasion attacks survive state-of-the-art adversarial fine-tuning, developing strategies that sweep the top 5 positions on the ELOQUENT 2026 Voi\u2026",
-      "source": "arXiv \u00b7 consciousness",
-      "date": "2026-07-15",
-      "link": "https://arxiv.org/abs/2607.13565v1",
-      "authors": "Dima Galat, Marian-Andrei Rizoiu"
-    },
-    {
-      "title": "Self-Aware Recursively Self-Improving Agents for Personal Singularity: A Goal-, Scope-, Tool-, and Benchmark-Driven Multi-Agent Architecture",
-      "summary": "Large language model (LLM) agents can plan, use tools, maintain memory, and execute long-horizon tasks. This paper proposes Self-Aware Recursively Self-Improving (SARSI) agents: g\u2026",
-      "source": "arXiv \u00b7 consciousness",
-      "date": "2026-07-14",
-      "link": "https://arxiv.org/abs/2607.12254v2",
-      "authors": "Chengshuai Yang"
     },
     {
       "title": "Introducing entropy measures to PK/PD models in propofol anesthesia as a replacement of BIS",
