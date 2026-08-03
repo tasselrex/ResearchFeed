@@ -1,188 +1,187 @@
-#!/usr/bin/env node
-/**
+#!/usr/bin/env python3
+from __future__ import annotations
 
-Generates feed.json for an IANDS consciousness / NDE feed.
-Sources: IANDS RSS/Atom feeds.
+import json
+import re
+import urllib.request
+import xml.etree.ElementTree as ET
+from datetime import datetime, timezone
+from pathlib import Path
 
+OUT = Path("feed.json")
+MAX_ITEMS = 24
 
-No external dependencies required.
-*/
+# Replace these URLs with the current IANDS RSS/Atom feed URLs you want to follow.
+SOURCES = [
+    (
+        "IANDS · Journal of Near-Death Studies",
+        "https://www.iands.org/research0/research/publications/journal-of-near-death-studies.feed?type=rss",
+    ),
+    (
+        "IANDS · NDE Research",
+        "https://research.iands.org/component/weblinks/category/142-nde-research.feed?type=rss",
+    ),
+]
 
-const fs = require("fs/promises");
-
-const OUT_FILE = "feed.json";
-const MAX_ITEMS = 24;
-
-// Official/current IANDS feeds found on the IANDS sites.
-const SOURCES = [
-{
-source: "IANDS · Journal of Near-Death Studies",
-url: "https://www.iands.org/research0/research/publications/journal-of-near-death-studies.feed?type=rss",
-},
-{
-source: "IANDS · NDE research links",
-url: "https://research.iands.org/component/weblinks/category/142-nde-research.feed?type=rss",
-},
-];
-
-function stripTags(s = "") {
-return String(s).replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
+HEADERS = {
+    "User-Agent": "Mozilla/5.0 (compatible; IANDSFeed/1.0; +https://github.com/tasselrex/consciousness)"
 }
 
-function htmlToText(s = "") {
-return stripTags(s)
-.replace(/&/g, "&")
-.replace(/</g, "<")
-.replace(/>/g, ">")
-.replace(/"/g, '"')
-.replace(/'/g, "'");
-}
 
-function truncate(s, n) {
-const text = String(s || "").trim();
-if (text.length <= n) return text;
-return text.slice(0, Math.max(0, n - 1)).trimEnd() + "…";
-}
+def clean(s: str | None) -> str:
+    if not s:
+        return ""
+    return re.sub(r"\s+", " ", s).strip()
 
-function fetchWithTimeout(url, timeoutMs = 20000) {
-const controller = new AbortController();
-const t = setTimeout(() => controller.abort(), timeoutMs);
 
-return fetch(url, {
-signal: controller.signal,
-headers: {
-"User-Agent":
-"Mozilla/5.0 (compatible; IANDSFeed/1.0; +https://github.com/tasselrex/consciousness)",
-},
-})
-.then((res) => {
-if (!res.ok) throw new Error(HTTP ${res.status} ${res.statusText});
-return res.text();
-})
-.finally(() => clearTimeout(t));
-}
+def strip_html(s: str | None) -> str:
+    if not s:
+        return ""
+    s = re.sub(r"<[^>]+>", " ", s)
+    return (
+        clean(s)
+        .replace("&amp;", "&")
+        .replace("&lt;", "<")
+        .replace("&gt;", ">")
+        .replace("&quot;", '"')
+        .replace("&apos;", "'")
+    )
 
-function parseAtom(xml, sourceLabel) {
-const entries = [];
-const entryMatches = xml.match(/<entry\b[\s\S]*?</entry>/g) || [];
 
-for (const entry of entryMatches) {
-const get = (tag) => {
-const m = entry.match(new RegExp(<${tag}>([\\s\\S]*?)<\\/${tag}>, "i"));
-return m ? htmlToText(m[1]) : "";
-};
+def truncate(s: str, n: int = 180) -> str:
+    s = clean(s)
+    return s if len(s) <= n else s[: n - 1].rstrip() + "…"
 
-const title = get("title");
-const summary = truncate(get("summary"), 180);
-const published = get("published").slice(0, 10);
-const updated = get("updated").slice(0, 10);
 
-const linkMatch =
-  entry.match(/<link[^>]*rel="alternate"[^>]*href="([^"]+)"/i) ||
-  entry.match(/<id>([\s\S]*?)<\/id>/i);
+def fetch(url: str, timeout: int = 20) -> str:
+    req = urllib.request.Request(url, headers=HEADERS)
+    with urllib.request.urlopen(req, timeout=timeout) as resp:
+        return resp.read().decode("utf-8", errors="replace")
 
-const authors = [...entry.matchAll(/<author>[\s\S]*?<name>([\s\S]*?)<\/name>[\s\S]*?<\/author>/gi)]
-  .map((m) => htmlToText(m[1]))
-  .filter(Boolean)
-  .slice(0, 3)
-  .join(", ");
 
-entries.push({
-  title,
-  summary,
-  source: sourceLabel,
-  date: published || updated || new Date().toISOString().slice(0, 10),
-  link: linkMatch ? htmlToText(linkMatch[1] || linkMatch[0]) : "https://www.iands.org/",
-  authors,
-});
+def parse_atom(root, source_label):
+    ns = {"a": "http://www.w3.org/2005/Atom"}
+    items = []
 
-}
+    for entry in root.findall("a:entry", ns):
+        title = clean(entry.findtext("a:title", default="", namespaces=ns))
+        summary = truncate(
+            strip_html(entry.findtext("a:summary", default="", namespaces=ns))
+        )
 
-return entries;
-}
+        published = clean(
+            entry.findtext("a:published", default="", namespaces=ns)
+        )[:10]
 
-function parseRss(xml, sourceLabel) {
-const entries = [];
-const itemMatches = xml.match(/<item\b[\s\S]*?</item>/g) || [];
+        updated = clean(
+            entry.findtext("a:updated", default="", namespaces=ns)
+        )[:10]
 
-for (const item of itemMatches) {
-const get = (tag) => {
-const m = item.match(new RegExp(<${tag}>([\\s\\S]*?)<\\/${tag}>, "i"));
-return m ? htmlToText(m[1]) : "";
-};
+        link = ""
+        for l in entry.findall("a:link", ns):
+            if l.attrib.get("href"):
+                link = l.attrib["href"]
+                break
 
-const title = get("title");
-const summary = truncate(get("description"), 180);
-const published = get("pubDate").slice(0, 10);
-const updated = get("date").slice(0, 10);
-const link = get("link") || get("guid") || "https://www.iands.org/";
+        if not link:
+            link = clean(entry.findtext("a:id", default="", namespaces=ns))
 
-const authors = [get("author"), get("dc:creator")].filter(Boolean).slice(0, 3).join(", ");
+        authors = ", ".join(
+            clean(a.findtext("a:name", default="", namespaces=ns))
+            for a in entry.findall("a:author", ns)
+        )
 
-entries.push({
-  title,
-  summary,
-  source: sourceLabel,
-  date: published || updated || new Date().toISOString().slice(0, 10),
-  link,
-  authors,
-});
+        items.append(
+            {
+                "title": title,
+                "summary": summary,
+                "source": source_label,
+                "date": published
+                or updated
+                or datetime.now(timezone.utc).date().isoformat(),
+                "link": link,
+                "authors": authors,
+            }
+        )
 
-}
+    return items
 
-return entries;
-}
 
-function parseFeed(xml, sourceLabel) {
-const head = xml.slice(0, 1200).toLowerCase();
-if (head.includes("<feed")) return parseAtom(xml, sourceLabel);
-if (head.includes("<rss") || head.includes("<rdf")) return parseRss(xml, sourceLabel);
+def parse_rss(root, source_label):
+    items = []
 
-try {
-const atom = parseAtom(xml, sourceLabel);
-if (atom.length) return atom;
-} catch (_) {}
+    channel = root.find("channel")
+    if channel is None:
+        return items
 
-return parseRss(xml, sourceLabel);
-}
+    for item in channel.findall("item"):
+        title = clean(item.findtext("title"))
+        summary = truncate(strip_html(item.findtext("description")))
+        date = clean(item.findtext("pubDate"))[:10]
+        link = clean(item.findtext("link"))
 
-async function gather() {
-const all = [];
-const errors = [];
+        items.append(
+            {
+                "title": title,
+                "summary": summary,
+                "source": source_label,
+                "date": date
+                or datetime.now(timezone.utc).date().isoformat(),
+                "link": link,
+                "authors": "",
+            }
+        )
 
-for (const s of SOURCES) {
-try {
-const xml = await fetchWithTimeout(s.url);
-const items = parseFeed(xml, s.source);
-all.push(...items);
-} catch (err) {
-errors.push(${s.source}: ${err.message});
-}
-}
+    return items
 
-const seen = new Set();
-const deduped = [];
-for (const item of all) {
-const key = (item.title || "").toLowerCase().trim();
-if (!key || seen.has(key)) continue;
-seen.add(key);
-deduped.push(item);
-}
 
-deduped.sort((a, b) => String(b.date).localeCompare(String(a.date)));
+def parse_feed(xml_text: str, source_label: str):
+    root = ET.fromstring(xml_text)
 
-const payload = {
-updatedAt: new Date().toISOString(),
-items: deduped.slice(0, MAX_ITEMS),
-errors,
-};
+    if root.tag.endswith("feed"):
+        return parse_atom(root, source_label)
 
-await fs.writeFile(OUT_FILE, JSON.stringify(payload, null, 2) + "\n", "utf8");
-console.log(Wrote ${OUT_FILE} with ${payload.items.length} items);
-if (errors.length) console.log("Errors:", errors);
-}
+    return parse_rss(root, source_label)
 
-gather().catch((err) => {
-console.error(err);
-process.exit(1);
-});
+
+def main():
+    all_items = []
+    errors = []
+
+    for label, url in SOURCES:
+        try:
+            xml = fetch(url)
+            all_items.extend(parse_feed(xml, label))
+        except Exception as e:
+            errors.append(f"{label}: {e}")
+
+    seen = set()
+    dedup = []
+
+    for item in all_items:
+        key = item["title"].lower()
+        if key in seen:
+            continue
+        seen.add(key)
+        dedup.append(item)
+
+    dedup.sort(key=lambda x: x["date"], reverse=True)
+
+    payload = {
+        "updatedAt": datetime.now(timezone.utc).isoformat(),
+        "items": dedup[:MAX_ITEMS],
+        "errors": errors,
+    }
+
+    OUT.write_text(json.dumps(payload, indent=2), encoding="utf-8")
+
+    print(f"Wrote {OUT} with {len(payload['items'])} items")
+
+    if errors:
+        print("\nErrors:")
+        for e in errors:
+            print(" -", e)
+
+
+if __name__ == "__main__":
+    main()
