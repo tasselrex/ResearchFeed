@@ -1,11 +1,560 @@
 {
-  "updatedAt": "2026-08-03T02:27:32.395521+00:00",
-  "items": [],
-  "errors": [
-    "IANDS: unknown url type: '...'",
-    "NDERF: unknown url type: '...'",
-    "UVA DOPS: unknown url type: '...'",
-    "Penny Sartori: unknown url type: '...'",
-    "Melvin Morse: unknown url type: '...'"
-  ]
+  "updatedAt": "2026-08-03T02:33:43.447243+00:00",
+  "items": [
+    {
+      "title": "IANDS Conference 2026 Registration is Now Open!",
+      "summary": "IANDS Conference 2026 registration is now officially open. The world's largest NDE gathering is happening August 27-30 in Bellevue, Washington. Learn more here! The post IANDS Con…",
+      "source": "IANDS",
+      "date": "Wed, 27 Ma",
+      "link": "https://iands.org/iands-conference-2026-registration-is-now-open/?utm_source=rss&utm_medium=rss&utm_campaign=iands-conference-2026-registration-is-now-open",
+      "authors": "Matt Terzi",
+      "tags": [
+        "NDE",
+        "Essay"
+      ]
+    },
+    {
+      "title": "Drs. Sadeghi, Weiler and Penberthy presented at the Brain, Mind, and Consciousness Conference 2026 hosted by The Indian Institute of Technology Mandi",
+      "summary": "The post Drs. Sadeghi, Weiler and Penberthy presented at the Brain, Mind, and Consciousness Conference 2026 hosted by The Indian Institute of Technology Mandi appeared first on Di…",
+      "source": "UVA DOPS",
+      "date": "Wed, 10 Ju",
+      "link": "https://iksmha.iitmandi.ac.in/mbcc/2026/",
+      "authors": "hks9px@virginia.edu",
+      "tags": [
+        "Essay"
+      ]
+    },
+    {
+      "title": "“Negative NDE” as insight, vitality, developmental thrust?",
+      "summary": "May I suggest that you run, not walk, to Sheila Joshi’s Neuroscience and Psi blog, where her latest post is … Continue reading →",
+      "source": "Dancing Past the Dark",
+      "date": "Wed, 07 Ma",
+      "link": "https://dancingpastthedark.wordpress.com/2012/03/07/negative-nde-as-insight-vitality-developmental-thrust/",
+      "authors": "nanbush",
+      "tags": [
+        "NDE",
+        "Psi/Survival",
+        "Essay"
+      ]
+    },
+    {
+      "title": "IANDS Glossary: What is a Spiritually Transformative Experience?",
+      "summary": "A spiritually transformative experience, or STE, can change a person's views and personality in an instant. Learn more in this new IANDS Glossary entry. The post IANDS Glossary: W…",
+      "source": "IANDS",
+      "date": "Wed, 03 Ju",
+      "link": "https://iands.org/iands-glossary-what-is-a-spiritually-transformative-experience/?utm_source=rss&utm_medium=rss&utm_campaign=iands-glossary-what-is-a-spiritually-transformative-experience",
+      "authors": "Matt Terzi",
+      "tags": [
+        "Essay"
+      ]
+    },
+    {
+      "title": "Comment on Is the universe friendly? by Rita",
+      "summary": "Very beautifully written post! :-) I don't find the universe to be unfriendly because the way I see it, God created the universe and if God is pure love and compassion, than the w…",
+      "source": "Dancing Past the Dark",
+      "date": "Wed, 02 Ma",
+      "link": "https://dancingpastthedark.wordpress.com/2012/04/29/is-the-universe-friendly/",
+      "authors": "Rita",
+      "tags": [
+        "Essay"
+      ]
+    },
+    {
+      "title": "Comment on IANDS Q&A: The Most Common, Important Elements of NDEs? by IANDS Glossary: Pleasurable Near-Death Experience ‣ IANDS",
+      "summary": "[…] two near-death experiences are exactly alike, but they do often share common elements that can occur in no particular order. Some pleasurable NDEs might exclude certain elemen…",
+      "source": "IANDS",
+      "date": "Tue, 16 Ju",
+      "link": "https://iands.org/what-are-the-most-common-elements-of-a-near-death-experience/",
+      "authors": "IANDS Glossary: Pleasurable Near-Death Experience ‣ IANDS",
+      "tags": [
+        "NDE"
+      ]
+    },
+    {
+      "title": "Comment on IANDS Q&A: Are Pets Seen in Near-Death Experiences? by IANDS Glossary: Pleasurable Near-Death Experience ‣ IANDS",
+      "summary": "[…] Who these beings are can vary wildly. Some experiencers report being reunited with deceased relatives or friends. Others report being reunited with pets. […]",
+      "source": "IANDS",
+      "date": "Tue, 16 Ju",
+      "link": "https://iands.org/iands-qa-are-pets-seen-in-near-death-experiences/",
+      "authors": "IANDS Glossary: Pleasurable Near-Death Experience ‣ IANDS",
+      "tags": [
+        "NDE"
+      ]
+    },
+    {
+      "title": "Comment on IANDS Q&A: Are NDEs Really Proof of the Afterlife? by IANDS Glossary: Pleasurable Near-Death Experience ‣ IANDS",
+      "summary": "[…] Are NDEs Really Proof of the Afterlife? […]",
+      "source": "IANDS",
+      "date": "Tue, 16 Ju",
+      "link": "https://iands.org/iands-qa-are-ndes-really-proof-of-the-afterlife/",
+      "authors": "IANDS Glossary: Pleasurable Near-Death Experience ‣ IANDS",
+      "tags": [
+        "NDE"
+      ]
+    },
+    {
+      "title": "Comment on IANDS Glossary: What is a Spiritually Transformative Experience? by IANDS Glossary: Pleasurable Near-Death Experience ‣ IANDS",
+      "summary": "[…] Spiritually Transformative Experience […]",
+      "source": "IANDS",
+      "date": "Tue, 16 Ju",
+      "link": "https://iands.org/iands-glossary-what-is-a-spiritually-transformative-experience/",
+      "authors": "IANDS Glossary: Pleasurable Near-Death Experience ‣ IANDS",
+      "tags": [
+        "NDE"
+      ]
+    },
+    {
+      "title": "DOPS researcher Dr. Marina Weiler recently participated in Reality Under Revision, an event hosted by The Visible College in Washington, D.C.",
+      "summary": "The post DOPS researcher Dr. Marina Weiler recently participated in Reality Under Revision, an event hosted by The Visible College in Washington, D.C. appeared first on Division o…",
+      "source": "UVA DOPS",
+      "date": "Tue, 14 Ju",
+      "link": "https://thevisiblecollege.org/",
+      "authors": "hks9px@virginia.edu",
+      "tags": [
+        "NDE",
+        "Research",
+        "Essay"
+      ]
+    },
+    {
+      "title": "IANDS Glossary: Pleasurable Near-Death Experience",
+      "summary": "A pleasurable near-death experience is one that's pleasant, peaceful, and affirming. Learn more about pleasurable NDEs in this IANDS glossary entry. The post IANDS Glossary: Pleas…",
+      "source": "IANDS",
+      "date": "Tue, 09 Ju",
+      "link": "https://iands.org/iands-glossary-pleasurable-near-death-experience/?utm_source=rss&utm_medium=rss&utm_campaign=iands-glossary-pleasurable-near-death-experience",
+      "authors": "Matt Terzi",
+      "tags": [
+        "NDE",
+        "Essay"
+      ]
+    },
+    {
+      "title": "IANDS Q&A: I Had an NDE. What Should I Do Now?",
+      "summary": "Having a near-death experience can leave you with many unanswered questions. This guide may help. The post IANDS Q&A: I Had an NDE. What Should I Do Now? first appeared on IANDS .",
+      "source": "IANDS",
+      "date": "Tue, 02 Ju",
+      "link": "https://iands.org/iands-qa-i-had-an-nde-what-should-i-do-now/?utm_source=rss&utm_medium=rss&utm_campaign=iands-qa-i-had-an-nde-what-should-i-do-now",
+      "authors": "Matt Terzi",
+      "tags": [
+        "NDE",
+        "Essay"
+      ]
+    },
+    {
+      "title": "Dr. Marieta Pehlivanova Featured on the CMAJ Podcast",
+      "summary": "The post Dr. Marieta Pehlivanova Featured on the CMAJ Podcast appeared first on Division of Perceptual Studies .",
+      "source": "UVA DOPS",
+      "date": "Thu, 30 Ju",
+      "link": "https://www.cmaj.ca/transcript-252003?fbclid=IwY2xjawTYcT9wZG9mAWV4dG4DYWVtAjEwAGJyaWQRMW91WVpDZThTcEJDdjJaRWFzcnRjBmFwcF9pZBAyMjIwMzkxNzg4MjAwODkyAAEeCCvg1x5BvhoZDb-ixW2X3N2Jk4egQaJ312nSzCZlJpUk33uQOpytVIeKKV0_aem_5ITrycUvsvui6fJzLxLmNg",
+      "authors": "hks9px@virginia.edu",
+      "tags": [
+        "Video",
+        "Essay"
+      ]
+    },
+    {
+      "title": "Dr. Marieta Pehlivanova Discusses Shared Death Experiences in Popular Mechanics",
+      "summary": "The post Dr. Marieta Pehlivanova Discusses Shared Death Experiences in Popular Mechanics appeared first on Division of Perceptual Studies .",
+      "source": "UVA DOPS",
+      "date": "Thu, 30 Ju",
+      "link": "https://www.popularmechanics.com/preview/science/a73170498/shared-death-experiences-consciousness/",
+      "authors": "hks9px@virginia.edu",
+      "tags": [
+        "NDE",
+        "Essay"
+      ]
+    },
+    {
+      "title": "Vital Signs Summer 2026: The Uplifting Impact of Sharing Groups",
+      "summary": "Vital Signs Summer 2026 is here! This free digital magazine explores an ancient Egyptian NDE, scientific advances in oncology involving Reiki, and so much more. The post Vital Sig…",
+      "source": "IANDS",
+      "date": "Thu, 25 Ju",
+      "link": "https://iands.org/vital-signs-summer-2026-the-uplifting-impact-of-sharing-groups/?utm_source=rss&utm_medium=rss&utm_campaign=vital-signs-summer-2026-the-uplifting-impact-of-sharing-groups",
+      "authors": "Matt Terzi",
+      "tags": [
+        "NDE",
+        "Essay"
+      ]
+    },
+    {
+      "title": "Comment on IANDS Glossary: What is a Spiritually Transformative Experience? by Vital Signs Summer 2026: The Uplifting Impact of Sharing Groups ‣ IANDS",
+      "summary": "[…] her shared death experience in 2020 that led her into mediumship. Brian Smith explores how spiritually transformative experiences can help heal grief. And we revisit a story f…",
+      "source": "IANDS",
+      "date": "Thu, 25 Ju",
+      "link": "https://iands.org/iands-glossary-what-is-a-spiritually-transformative-experience/",
+      "authors": "Vital Signs Summer 2026: The Uplifting Impact of Sharing Groups ‣ IANDS",
+      "tags": [
+        "NDE",
+        "Psi/Survival"
+      ]
+    },
+    {
+      "title": "Dr. Marieta Pehlivanova to Present Keynote Lecture and Participate in “Re-thinking Consciousness” Debate at Euro-Asian Scientific Congress",
+      "summary": "The post Dr. Marieta Pehlivanova to Present Keynote Lecture and Participate in “Re-thinking Consciousness” Debate at Euro-Asian Scientific Congress appeared first on Division of P…",
+      "source": "UVA DOPS",
+      "date": "Thu, 23 Ju",
+      "link": "https://aspic.ug.edu.pl/program/day-2/panel-2-re-thinking-consciousness/lecture-7/",
+      "authors": "hks9px@virginia.edu",
+      "tags": [
+        "Essay"
+      ]
+    },
+    {
+      "title": "Watch Dr. David Acunzo’s Presentation from UIP’s International Colloquium La Conscience & l’Invisible",
+      "summary": "We're pleased to share that the video of Dr. David Acunzo's presentation at the international colloquium La Conscience & l'Invisible is now available to watch. -Please note that t…",
+      "source": "UVA DOPS",
+      "date": "Thu, 18 Ju",
+      "link": "https://med.virginia.edu/perceptual-studies/2026/06/18/watch-dr-david-acunzos-presentation-from-uips-international-colloquium-la-conscience-linvisible/",
+      "authors": "hks9px@virginia.edu",
+      "tags": [
+        "Video"
+      ]
+    },
+    {
+      "title": "Dr. David Acunzo Featured in UVA School of Medicine Article on 70 Years of ESP Neuroimaging Research",
+      "summary": "The post Dr. David Acunzo Featured in UVA School of Medicine Article on 70 Years of ESP Neuroimaging Research appeared first on Division of Perceptual Studies .",
+      "source": "UVA DOPS",
+      "date": "Thu, 18 Ju",
+      "link": "https://news.med.virginia.edu/research/scientists-mine-70-years-of-research-in-search-of-answers-about-esp/",
+      "authors": "hks9px@virginia.edu",
+      "tags": [
+        "Research",
+        "Essay"
+      ]
+    },
+    {
+      "title": "Dancing moves to a new home",
+      "summary": "Those of you who are still subscribed to this blog at dancingpastthedark.wordpress.com, it’s time to pack for a move. Within … Continue reading →",
+      "source": "Dancing Past the Dark",
+      "date": "Thu, 03 Ma",
+      "link": "https://dancingpastthedark.wordpress.com/2012/05/02/dancing-moves-to-a-new-home/",
+      "authors": "nanbush",
+      "tags": [
+        "Essay"
+      ]
+    },
+    {
+      "title": "Comment on Is the universe friendly? by Sandy Renner",
+      "summary": "Nan, Your post was certainly thought provoking. In fact I've been thinking about it since I read it. If I understand you correctly, you are counseling humility when faced with thi…",
+      "source": "Dancing Past the Dark",
+      "date": "Thu, 03 Ma",
+      "link": "https://dancingpastthedark.wordpress.com/2012/04/29/is-the-universe-friendly/",
+      "authors": "Sandy Renner",
+      "tags": [
+        "NDE",
+        "Essay"
+      ]
+    },
+    {
+      "title": "You can’t fight the dark",
+      "summary": "Someone sent me this the other day. Sorry not to be able to credit the designer. It’s worth the squint.",
+      "source": "Dancing Past the Dark",
+      "date": "Thu, 01 Ma",
+      "link": "https://dancingpastthedark.wordpress.com/2012/03/01/you-cant-fight-the-dark/",
+      "authors": "nanbush",
+      "tags": [
+        "Consciousness"
+      ]
+    },
+    {
+      "title": "Is the universe friendly?",
+      "summary": "I’ve been promising to respond with my own answer to Einstein’s question: Is the universe friendly? Needless to say, it’s … Continue reading →",
+      "source": "Dancing Past the Dark",
+      "date": "Sun, 29 Ap",
+      "link": "https://dancingpastthedark.wordpress.com/2012/04/29/is-the-universe-friendly/",
+      "authors": "nanbush",
+      "tags": [
+        "Consciousness"
+      ]
+    },
+    {
+      "title": "Are these NDEs HELLBOUND?",
+      "summary": "Christian or not, we’ve all heard the ‘hell story.’ The question is, is it true? And if so, which version … Continue reading →",
+      "source": "Dancing Past the Dark",
+      "date": "Sun, 25 Ma",
+      "link": "https://dancingpastthedark.wordpress.com/2012/03/25/are-these-ndes-hellbound/",
+      "authors": "nanbush",
+      "tags": [
+        "NDE"
+      ]
+    },
+    {
+      "title": "Sitting in mythical time",
+      "summary": "It’s Easter, and in all the churches that have been part of my life, I imagine what is going on … Continue reading →",
+      "source": "Dancing Past the Dark",
+      "date": "Sun, 08 Ap",
+      "link": "https://dancingpastthedark.wordpress.com/2012/04/08/sitting-in-mythical-time/",
+      "authors": "nanbush",
+      "tags": [
+        "Consciousness"
+      ]
+    },
+    {
+      "title": "Holy Week, Distressing NDEs, and the Journey of Transformation",
+      "summary": "On the calendar of the Christian year, today is the beginning of Holy Week. The events of this week, in … Continue reading →",
+      "source": "Dancing Past the Dark",
+      "date": "Sun, 01 Ap",
+      "link": "https://dancingpastthedark.wordpress.com/2012/04/01/holy-week-distressing-ndes-and-the-journey-of-transformation/",
+      "authors": "nanbush",
+      "tags": [
+        "NDE"
+      ]
+    },
+    {
+      "title": "Dr. Marina Weiler Discusses Consciousness Research and Extraordinary Human Experiences on the Neon Galactic Podcast",
+      "summary": "The post Dr. Marina Weiler Discusses Consciousness Research and Extraordinary Human Experiences on the Neon Galactic Podcast appeared first on Division of Perceptual Studies .",
+      "source": "UVA DOPS",
+      "date": "Sat, 18 Ju",
+      "link": "https://youtu.be/bgDu2Ks-o7Y",
+      "authors": "hks9px@virginia.edu",
+      "tags": [
+        "Video",
+        "Research",
+        "Essay"
+      ]
+    },
+    {
+      "title": "Comment on IANDS Glossary: What is a Spiritually Transformative Experience? by What Does Spiritual Awakening Mean for You?",
+      "summary": "[…] adapting your daily life to reflect your new awareness. This phase, according to IANDS research, can last months to years and involves functioning in an external world that ha…",
+      "source": "IANDS",
+      "date": "Sat, 13 Ju",
+      "link": "https://iands.org/iands-glossary-what-is-a-spiritually-transformative-experience/",
+      "authors": "What Does Spiritual Awakening Mean for You?",
+      "tags": [
+        "Research"
+      ]
+    },
+    {
+      "title": "Comment on Results of New IANDS Near-Death Experience Poll Revealed by Un impactante estudio revela que las experiencias cercanas a la muerte son más comunes de lo que crees. | maestroviejo",
+      "summary": "[…] IANDS. Edición: […]",
+      "source": "IANDS",
+      "date": "Sat, 06 Ju",
+      "link": "https://iands.org/results-of-new-iands-near-death-experience-poll-revealed/",
+      "authors": "Un impactante estudio revela que las experiencias cercanas a la muerte son más comunes de lo que crees. &#124; maestroviejo",
+      "tags": [
+        "NDE"
+      ]
+    },
+    {
+      "title": "Comment on Is the universe friendly? by annewhitaker",
+      "summary": "What a fantastic post, Nan! The context you provide here including the Kraus quote sums up where I am in relation to our mysterious existence, much more coherently than I could. T…",
+      "source": "Dancing Past the Dark",
+      "date": "Mon, 30 Ap",
+      "link": "https://dancingpastthedark.wordpress.com/2012/04/29/is-the-universe-friendly/",
+      "authors": "annewhitaker",
+      "tags": [
+        "Essay"
+      ]
+    },
+    {
+      "title": "Comment on Is the universe friendly? by Dave Woods",
+      "summary": "In reply to <a href=\"https://dancingpastthedark.wordpress.com/2012/04/29/is-the-universe-friendly/#comment-599\">nanbush</a>. Bleak or not, that's what it comes down to when you st…",
+      "source": "Dancing Past the Dark",
+      "date": "Mon, 30 Ap",
+      "link": "https://dancingpastthedark.wordpress.com/2012/04/29/is-the-universe-friendly/",
+      "authors": "Dave Woods",
+      "tags": [
+        "Consciousness"
+      ]
+    },
+    {
+      "title": "Comment on A Wonderful Note from Congresswoman Foushee to Start NDE Week by Head to the New Official IANDS Fundraising Auction Today!",
+      "summary": "[…] Flag flown over the Capitol, at the request of U.S. Representative Valerie Foushee (D-NC), who helped IANDS celebrate our first-ever Near-Death Experience Week this past […]",
+      "source": "IANDS",
+      "date": "Mon, 20 Ju",
+      "link": "https://iands.org/a-wonderful-note-from-congresswoman-foushee-to-start-nde-week/",
+      "authors": "Head to the New Official IANDS Fundraising Auction Today!",
+      "tags": [
+        "NDE"
+      ]
+    },
+    {
+      "title": "Making sense of an NDE, distressing or otherwise",
+      "summary": "A reader asks, “How do you make sense of these experiences?” Ken Ring asked me that question once, and it … Continue reading →",
+      "source": "Dancing Past the Dark",
+      "date": "Mon, 19 Ma",
+      "link": "https://dancingpastthedark.wordpress.com/2012/03/18/making-sense-of-a-distressing-nde/",
+      "authors": "nanbush",
+      "tags": [
+        "NDE"
+      ]
+    },
+    {
+      "title": "New Video: Dr. Saeedeh Sadeghi on Statistical Patterns in Reincarnation-Type Cases",
+      "summary": "The post New Video: Dr. Saeedeh Sadeghi on Statistical Patterns in Reincarnation-Type Cases appeared first on Division of Perceptual Studies .",
+      "source": "UVA DOPS",
+      "date": "Mon, 15 Ju",
+      "link": "https://www.youtube.com/watch?v=x8FENM1tL6M",
+      "authors": "hks9px@virginia.edu",
+      "tags": [
+        "Reincarnation",
+        "Video",
+        "Essay"
+      ]
+    },
+    {
+      "title": "Distressing NDEs–a book! and a Multinational Discovery!",
+      "summary": "That luminous object to the left is the cover of Dancing Past the Dark: Distressing Near-Death Experiences. Yes, it’s almost here. The … Continue reading →",
+      "source": "Dancing Past the Dark",
+      "date": "Mon, 12 Ma",
+      "link": "https://dancingpastthedark.wordpress.com/2012/03/12/distressing-ndes-a-book-and-a-multinational-discovery/",
+      "authors": "nanbush",
+      "tags": [
+        "NDE"
+      ]
+    },
+    {
+      "title": "Comment on Sitting in mythical time by rabbitdawg",
+      "summary": "Sandy, Back in the early christian era in Rome, when believers witnessed their friends, spouse, parents and / or children slowly and horrifically executed using sadistic methods i…",
+      "source": "Dancing Past the Dark",
+      "date": "Mon, 09 Ap",
+      "link": "https://dancingpastthedark.wordpress.com/2012/04/08/sitting-in-mythical-time/",
+      "authors": "rabbitdawg",
+      "tags": [
+        "Consciousness"
+      ]
+    },
+    {
+      "title": "Comment on Sitting in mythical time by Sandy",
+      "summary": "In reply to <a href=\"https://dancingpastthedark.wordpress.com/2012/04/08/sitting-in-mythical-time/#comment-583\">rabbitdawg</a>. Rabbitdawg, Wow! I had never heard/thought about yo…",
+      "source": "Dancing Past the Dark",
+      "date": "Mon, 09 Ap",
+      "link": "https://dancingpastthedark.wordpress.com/2012/04/08/sitting-in-mythical-time/",
+      "authors": "Sandy",
+      "tags": [
+        "Consciousness"
+      ]
+    },
+    {
+      "title": "Comment on IANDS Q&A: Are NDEs Really Proof of the Afterlife? by IANDS Glossary: Distressing Near-Death Experience (Negative NDE)",
+      "summary": "[…] Are NDEs Really Proof of the Afterlife? […]",
+      "source": "IANDS",
+      "date": "Mon, 08 Ju",
+      "link": "https://iands.org/iands-qa-are-ndes-really-proof-of-the-afterlife/",
+      "authors": "IANDS Glossary: Distressing Near-Death Experience (Negative NDE)",
+      "tags": [
+        "NDE"
+      ]
+    },
+    {
+      "title": "Comment on IANDS Glossary: The Remarkable, Uplifting Definition of a Life Review by IANDS Glossary: Distressing Near-Death Experience (Negative NDE)",
+      "summary": "[…] Life Review […]",
+      "source": "IANDS",
+      "date": "Mon, 08 Ju",
+      "link": "https://iands.org/iands-glossary-the-remarkable-uplifting-definition-of-a-life-review/",
+      "authors": "IANDS Glossary: Distressing Near-Death Experience (Negative NDE)",
+      "tags": [
+        "NDE",
+        "Research"
+      ]
+    },
+    {
+      "title": "Don’t Miss Early Bird Registration for IANDS Conference 2026",
+      "summary": "Looking forward to attending IANDS Conference 2026? You'll want to be sure to catch these early bird registration discounts, before they fly the coop! The post Don’t Miss Early Bi…",
+      "source": "IANDS",
+      "date": "Mon, 06 Ju",
+      "link": "https://iands.org/dont-miss-early-bird-registration-for-iands-conference-2026/?utm_source=rss&utm_medium=rss&utm_campaign=dont-miss-early-bird-registration-for-iands-conference-2026",
+      "authors": "Matt Terzi",
+      "tags": [
+        "Essay"
+      ]
+    },
+    {
+      "title": "A Wonderful Note from Congresswoman Foushee to Start NDE Week",
+      "summary": "U.S. Congresswoman Valerie P. Foushee helped inaugurate the first-ever Near-Death Experience Week (June 1-7) with a special message for IANDS. The post A Wonderful Note from Congr…",
+      "source": "IANDS",
+      "date": "Mon, 01 Ju",
+      "link": "https://iands.org/a-wonderful-note-from-congresswoman-foushee-to-start-nde-week/?utm_source=rss&utm_medium=rss&utm_campaign=a-wonderful-note-from-congresswoman-foushee-to-start-nde-week",
+      "authors": "Matt Terzi",
+      "tags": [
+        "NDE",
+        "Essay"
+      ]
+    },
+    {
+      "title": "New Podcast Feature: Dr. Edward Kelly on A Wonderjunkie with Ryan Anderson",
+      "summary": "The post New Podcast Feature: Dr. Edward Kelly on A Wonderjunkie with Ryan Anderson appeared first on Division of Perceptual Studies .",
+      "source": "UVA DOPS",
+      "date": "Fri, 31 Ju",
+      "link": "https://open.spotify.com/episode/4mFx8zE6vdrrqwLwY5FNdl",
+      "authors": "hks9px@virginia.edu",
+      "tags": [
+        "NDE",
+        "Video",
+        "Essay"
+      ]
+    },
+    {
+      "title": "Results of New IANDS Near-Death Experience Poll Revealed",
+      "summary": "A new near-death experience poll, conducted by IANDS and Centiment, reveals that 23 percent of American adults say they've had a near-death experience. The post Results of New IAN…",
+      "source": "IANDS",
+      "date": "Fri, 29 Ma",
+      "link": "https://iands.org/results-of-new-iands-near-death-experience-poll-revealed/?utm_source=rss&utm_medium=rss&utm_campaign=results-of-new-iands-near-death-experience-poll-revealed",
+      "authors": "Matt Terzi",
+      "tags": [
+        "NDE",
+        "Essay"
+      ]
+    },
+    {
+      "title": "Comment on Is the universe friendly? by nanbush",
+      "summary": "In reply to <a href=\"https://dancingpastthedark.wordpress.com/2012/04/29/is-the-universe-friendly/#comment-602\">Rita</a>. Thank you, Rita.",
+      "source": "Dancing Past the Dark",
+      "date": "Fri, 19 Ap",
+      "link": "https://dancingpastthedark.wordpress.com/2012/04/29/is-the-universe-friendly/",
+      "authors": "nanbush",
+      "tags": [
+        "Consciousness"
+      ]
+    },
+    {
+      "title": "New book, new address for distressing NDEs",
+      "summary": "With the publication of the ebook, Dancing Past the Dark: Distressing Near-Death Experiences, this blog is moving. It will look the same, … Continue reading →",
+      "source": "Dancing Past the Dark",
+      "date": "Fri, 13 Ap",
+      "link": "https://dancingpastthedark.wordpress.com/2012/04/13/new-book-new-address-for-distressing-ndes/",
+      "authors": "nanbush",
+      "tags": [
+        "NDE",
+        "Research",
+        "Essay"
+      ]
+    },
+    {
+      "title": "Great Places to Eat in Bellevue During IANDS Conference 2026",
+      "summary": "Looking for great places to eat in Bellevue, Washington during your trip for IANDS Conference 2026? Our conference restaurant guide features excellent eateries! The post Great Pla…",
+      "source": "IANDS",
+      "date": "Fri, 10 Ju",
+      "link": "https://iands.org/great-places-to-eat-in-bellevue-during-iands-conference-2026/?utm_source=rss&utm_medium=rss&utm_campaign=great-places-to-eat-in-bellevue-during-iands-conference-2026",
+      "authors": "Matt Terzi",
+      "tags": [
+        "Essay"
+      ]
+    },
+    {
+      "title": "IANDS Glossary: Distressing Near-Death Experience (Negative NDE)",
+      "summary": "What is a distressing near-death experience, and how is it different from a pleasurable NDE? Let's find out in this new IANDS Glossary entry. The post IANDS Glossary: Distressing…",
+      "source": "IANDS",
+      "date": "Fri, 05 Ju",
+      "link": "https://iands.org/iands-glossary-distressing-near-death-experience-negative-nde/?utm_source=rss&utm_medium=rss&utm_campaign=iands-glossary-distressing-near-death-experience-negative-nde",
+      "authors": "Matt Terzi",
+      "tags": [
+        "NDE",
+        "Essay"
+      ]
+    }
+  ],
+  "errors": [],
+  "sourceCounts": {
+    "IANDS": 20,
+    "NDERF": 0,
+    "UVA DOPS": 10,
+    "Horizon Research": 0,
+    "Dr Penny Sartori": 0,
+    "Dancing Past the Dark": 20,
+    "Melvin Morse": 0,
+    "SelfConsciousMind": 0
+  },
+  "sourceTotal": 8,
+  "itemTotal": 47
 }
