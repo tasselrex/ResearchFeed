@@ -1,8 +1,11 @@
 {
-  "updatedAt": "2026-08-03T02:17:03.504680+00:00",
+  "updatedAt": "2026-08-03T02:25:28.968904+00:00",
   "items": [],
   "errors": [
-    "IANDS \u00b7 Journal of Near-Death Studies: HTTP Error 403: Forbidden",
-    "IANDS \u00b7 NDE Research: HTTP Error 403: Forbidden"
+    "IANDS: unknown url type: '...'",
+    "NDERF: unknown url type: '...'",
+    "UVA DOPS: unknown url type: '...'",
+    "Penny Sartori: unknown url type: '...'",
+    "Melvin Morse: unknown url type: '...'"
   ]
 }
