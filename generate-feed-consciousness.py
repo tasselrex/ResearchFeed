@@ -9,7 +9,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 OUT = Path("feed.json")
-MAX_ITEMS = 24
+MAX_ITEMS = 150
 
 # Replace these URLs with the current IANDS RSS/Atom feed URLs you want to follow.
 SOURCES = [
