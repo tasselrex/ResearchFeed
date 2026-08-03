@@ -74,8 +74,8 @@ return m ? htmlToText(m[1]) : "";
 
 const title = get("title");
 const summary = truncate(get("summary"), 180);
-const published = get("published").slice(0, 10);
-const updated = get("updated").slice(0, 10);
+const published = get("published").slice(0, 100);
+const updated = get("updated").slice(0, 100);
 
 const linkMatch =
   entry.match(/<link[^>]*rel="alternate"[^>]*href="([^"]+)"/i) ||
