@@ -1,4 +1,5 @@
 <script>
+document.addEventListener("DOMContentLoaded", () => {
   const SAMPLE = [
     {
       title: "Sample: near-death experiences and aftereffects",
@@ -30,6 +31,16 @@
     }
   ];
 
+  const root = document.getElementById("items");
+  const errorBox = document.getElementById("error");
+  const statusBox = document.getElementById("status");
+  const updatedBox = document.getElementById("updated");
+
+  if (!root) {
+    console.error("Missing element with id='items'");
+    return;
+  }
+
   function esc(s) {
     return String(s ?? "")
       .replaceAll("&", "&amp;")
@@ -40,7 +51,6 @@
   }
 
   function render(items) {
-    const root = document.getElementById("items");
     root.innerHTML = "";
     const list = (Array.isArray(items) && items.length ? items : SAMPLE).slice(0, 50);
 
@@ -63,38 +73,42 @@
   }
 
   async function loadFeed() {
-    const errorBox = document.getElementById("error");
     try {
       const res = await fetch("./feed.json", { cache: "no-store" });
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       const data = await res.json();
-      const items = data.items || data;
-      render(items);
-      document.getElementById("status").textContent = "live";
-      errorBox.style.display = "none";
-      document.getElementById("updated").textContent =
-        `Updated ${new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}`;
+      render(data.items || data);
+
+      if (statusBox) statusBox.textContent = "live";
+      if (errorBox) errorBox.style.display = "none";
+      if (updatedBox) {
+        updatedBox.textContent =
+          `Updated ${new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}`;
+      }
     } catch (err) {
       render(SAMPLE);
-      document.getElementById("status").textContent = "sample mode";
-      errorBox.style.display = "block";
-      errorBox.textContent =
-        "Could not load feed.json yet.\n" +
-        "This usually means the GitHub Action has not run, or Pages has not refreshed.\n\n" +
-        String(err);
-      document.getElementById("updated").textContent = "Refreshes every 30 minutes";
+
+      if (statusBox) statusBox.textContent = "sample mode";
+      if (errorBox) {
+        errorBox.style.display = "block";
+        errorBox.textContent =
+          "Could not load feed.json yet.\n" +
+          "This usually means the GitHub Action has not run, or Pages has not refreshed.\n\n" +
+          String(err);
+      }
+      if (updatedBox) updatedBox.textContent = "Refreshes every 30 minutes";
+      console.error(err);
     }
   }
 
   loadFeed();
   setInterval(loadFeed, 30 * 60 * 1000);
 
-  const container = document.getElementById("items");
   let direction = 1;
   let scrollPos = 0;
 
   function autoScroll() {
-    const maxScroll = container.scrollHeight - container.clientHeight;
+    const maxScroll = root.scrollHeight - root.clientHeight;
 
     if (maxScroll > 0) {
       scrollPos += direction;
@@ -107,11 +121,12 @@
         direction = 1;
       }
 
-      container.scrollTop = scrollPos;
+      root.scrollTop = scrollPos;
     }
 
     requestAnimationFrame(autoScroll);
   }
 
   requestAnimationFrame(autoScroll);
+});
 </script>
