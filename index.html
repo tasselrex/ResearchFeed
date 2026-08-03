@@ -215,7 +215,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let direction = 1;
   let scrollPos = 0;
-
+  let autoScrollPausedUntil = 0;
+  
+  root.addEventListener(
+    "wheel",
+    (e) => {
+      e.preventDefault();
+  
+      scrollPos += e.deltaY;
+      const maxScroll = root.scrollHeight - root.clientHeight;
+  
+      if (maxScroll > 0) {
+        scrollPos = Math.max(0, Math.min(maxScroll, scrollPos));
+        root.scrollTop = scrollPos;
+      }
+  
+      autoScrollPausedUntil = Date.now() + 1500;
+    },
+    { passive: false }
+  );
   function autoScroll() {
     const maxScroll = root.scrollHeight - root.clientHeight;
 
