@@ -137,15 +137,6 @@
     }
   ];
 
-  const root = document.getElementById("items");
-  const errorBox = document.getElementById("error");
-  const statusBox = document.getElementById("status");
-  const updatedBox = document.getElementById("updated");
-
-  if (!root) {
-    console.error("Missing element with id='items'");
-    return;
-  }
 
   function esc(s) {
     return String(s ?? "")
