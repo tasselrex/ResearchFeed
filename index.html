@@ -48,20 +48,31 @@
 
 <script> const SAMPLE = [ { title: "Sample: near-death experiences and aftereffects", source: "sample", date: new Date().toISOString().slice(0, 10), summary: "This page is waiting for a generated feed.json file from GitHub Actions.", link: "#" }, { title: "Sample: consciousness research and transpersonal studies", source: "sample", date: new Date().toISOString().slice(0, 10), summary: "Once feed.json is refreshed, these sample items will be replaced.", link: "#" }, { title: "Sample: meditation, awareness, and altered states", source: "sample", date: new Date().toISOString().slice(0, 10), summary: "The widget can still render even before the first scheduled run.", link: "#" }, { title: "Sample: philosophy of mind and consciousness models", source: "sample", date: new Date().toISOString().slice(0, 10), summary: "Use this as the XENEON Edge page URL after GitHub Pages is enabled.", link: "#" } ]; function esc(s) { return String(s ?? "") .replaceAll("&", "&amp;") .replaceAll("<", "&lt;") .replaceAll(">", "&gt;") .replaceAll('"', "&quot;") .replaceAll("'", "&#39;"); } function render(items) { const root = document.getElementById("items"); root.innerHTML = ""; const list = (Array.isArray(items) && items.length ? items : SAMPLE).slice(0, 50); for (const item of list) { const div = document.createElement("div"); div.className = "item"; div.innerHTML = ` <div class="headline"><a href="${item.link || '#'}" target="_blank" rel="noreferrer">${esc(item.title || "Untitled")}</a></div> <div class="meta"><span class="tag">${esc(item.source || "source")}</span><span>·</span><span>${esc(item.date || "")}</span></div> <div class="summary">${esc(item.summary || "")}</div> `; root.appendChild(div); } } async function loadFeed() { const errorBox = document.getElementById("error"); try { const res = await fetch("./feed.json", { cache: "no-store" }); if (!res.ok) throw new Error(`HTTP ${res.status}`); const data = await res.json(); const items = data.items || data; render(items); document.getElementById("status").textContent = "live"; errorBox.style.display = "none"; document.getElementById("updated").textContent = `Updated ${new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}`; } catch (err) { render(SAMPLE); document.getElementById("status").textContent = "sample mode"; errorBox.style.display = "block"; errorBox.textContent = "Could not load feed.json yet.\n" + "This usually means the GitHub Action has not run, or Pages has not refreshed.\n\n" + String(err); document.getElementById("updated").textContent = "Refreshes every 30 minutes"; } } loadFeed(); setInterval(loadFeed, 30 * 60 * 1000); const container = document.getElementById("items"); 
   
+const container = document.getElementById("items");
 let direction = 1;
+let scrollPos = 0;
 
-setInterval(() => {
+function autoScroll() {
   const maxScroll = container.scrollHeight - container.clientHeight;
-  if (maxScroll <= 0) return;
 
-  container.scrollTop += direction;
+  if (maxScroll > 0) {
+    scrollPos += direction;
 
-  if (container.scrollTop >= maxScroll) {
-    direction = -1;
-  } else if (container.scrollTop <= 0) {
-    direction = 1;
+    if (scrollPos >= maxScroll) {
+      scrollPos = maxScroll;
+      direction = -1;
+    } else if (scrollPos <= 0) {
+      scrollPos = 0;
+      direction = 1;
+    }
+
+    container.scrollTop = scrollPos;
   }
-}, 40);
+
+  requestAnimationFrame(autoScroll);
+}
+
+requestAnimationFrame(autoScroll);
 
 </script>
 
