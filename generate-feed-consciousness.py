@@ -13,14 +13,11 @@ MAX_ITEMS = 150
 
 # Replace these URLs with the current IANDS RSS/Atom feed URLs you want to follow.
 SOURCES = [
-    (
-        "IANDS · Journal of Near-Death Studies",
-        "https://www.iands.org/research0/research/publications/journal-of-near-death-studies.feed?type=rss",
-    ),
-    (
-        "IANDS · NDE Research",
-        "https://research.iands.org/component/weblinks/category/142-nde-research.feed?type=rss",
-    ),
+    ("IANDS", "..."),
+    ("NDERF", "..."),
+    ("UVA DOPS", "..."),
+    ("Penny Sartori", "..."),
+    ("Melvin Morse", "..."),
 ]
 
 HEADERS = {
